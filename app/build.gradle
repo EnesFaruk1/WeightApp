@@ -60,7 +60,13 @@ dependencies {
     // Timber
     implementation 'com.jakewharton.timber:timber:5.0.1'
 
-    // Local Storage
+    // Shared Preferences
     implementation 'com.orhanobut:hawk:2.0.1'
+
+    // Room Database
+    def room_version = "2.4.2"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
 
 }
