@@ -7,7 +7,7 @@ import com.enesfaruk.weightapp.utils.extensions.orZero
 /**
  * Created by Enes Faruk Işık on 25.07.2022.
  */
-class WeightEntityMapper {
+object WeightEntityMapper {
 
     fun map(entity: Weight): WeightUIModel {
         return WeightUIModel(

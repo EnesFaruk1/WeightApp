@@ -24,20 +24,25 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initViews()
+        observeData()
     }
 
-    private fun onClickWeight(weight: WeightUIModel){
+    private fun setUIState(uiState: HomeViewModel.UiState) {
+        adapterWeightHistory.submitList(uiState.histories)
+    }
+
+    private fun observeData() {
 
     }
 
-    private fun observe() {
-
-    }
-
-    private fun initViews() {
-        binding.rvWeightHistory.adapter = adapterWeightHistory.apply {
-            //submitList(listOf(Weigh))
+    private fun initViews() = with(binding) {
+        rvWeightHistory.adapter = adapterWeightHistory.apply {
         }
+    }
+
+    private fun onClickWeight(weight: WeightUIModel) {
+
     }
 
 }
